@@ -12,8 +12,9 @@ from sqlalchemy import Column, Integer, Numeric, String, DateTime, UniqueConstra
 from data_models.mis_db_helper import Base
 # Base = declarative_base()
 
+
 class RawFreq(Base):
     __tablename__ = 'raw_freq'
-    id   = Column(Integer, primary_key=True)
-    freq = Column(Numeric(precision=5, scale=3),nullable=False)
+    id = Column(Integer, primary_key=True)
+    freq = Column(Numeric(precision=5, scale=3), nullable=False)
     data_time = Column(DateTime, nullable=False, unique=True)
